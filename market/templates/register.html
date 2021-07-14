@@ -1,0 +1,33 @@
+{% extends 'base.html'%}
+
+{% block title %}
+    Registration Page
+{% endblock %}
+
+{% block content %}
+<body class="text-center">
+    <div class="container">
+        <form method="POST" class="form-register" style="color:white;">
+            <img class="mb-4" src="https://res.cloudinary.com/dusdl7ezi/image/upload/v1626278061/reg_from_ymvu0k.png" height=200 width=200 alt="">
+            <h1 class="h3 mb-3 font-weight-normal">
+                Please Create your Account
+            </h1>
+            <br>
+            {{ form.username.label() }}
+            {{ form.username(class="form-control", placeholder="username") }}
+
+            {{ form.email_address.label() }}
+            {{ form.email_address(class="form-control", placeholder="Email Address") }}
+
+            {{ form.password1.label() }}
+            {{ form.password1(class="form-control", placeholder="password") }}
+
+            {{ form.password2.label() }}
+            {{ form.password2(class="form-control", placeholder="re-enter password") }}
+            
+            <br>
+            {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+        </form>
+    </div>
+</body>
+{% endblock %}
